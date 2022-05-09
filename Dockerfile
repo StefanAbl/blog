@@ -1,6 +1,7 @@
-FROM klakegg/hugo AS builder
+FROM klakegg/hugo:alpine AS builder
 WORKDIR /workdir
 COPY . /workdir
+RUN apk add --update --no-cache git
 RUN git submodule init && git submodule update && hugo && ls -lah public/*
 
 FROM nginx
