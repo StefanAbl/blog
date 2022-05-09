@@ -1,7 +1,7 @@
 FROM klakegg/hugo AS builder
 WORKDIR /workdir
 COPY . /workdir
-RUN hugo && ls -lah public/*
+RUN git submodule init && git submodule update && hugo && ls -lah public/*
 
 FROM nginx
 COPY --from=builder /workdir/public /usr/share/nginx/html
