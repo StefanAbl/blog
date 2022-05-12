@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Setup High-Availability for FreeIPA using Keepalived"
-canonicalURL: "https://canonical.url/to/page"
+canonicalURL: "https://blog.stabl.one/posts/freeipa-ha/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
@@ -31,7 +31,7 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-# FreeIPA High-Availbility with Keepalived
+## FreeIPA High-Availbility with Keepalived
 
 FreeIPA is a popular application which can be used for centralized user and host management, DNS and even certificates. While multiple replicas of the FreeIPA server can provide failover, it is not truly highly-available unless the client switches over to the replica server. Therefore we will configure the web interface and the LDAP server to automatically failover and be available under the same address/hostname at all times.
 
