@@ -2,7 +2,11 @@ FROM klakegg/hugo:alpine AS builder
 WORKDIR /workdir
 COPY . /workdir
 RUN apk add --update --no-cache git
-RUN git submodule init && git submodule update && hugo --panicOnWarning  && ls -lah public/*
+RUN git submodule init && \
+  git submodule update && \
+  hugo --panicOnWarning && \
+  sed -i 's/.*_internal\/google_analytics.html.*//g' themes/PaperMod/layouts/partials/head.html && \
+  ls -lah public/*
 
 FROM nginx
 COPY --from=builder /workdir/public /usr/share/nginx/html
