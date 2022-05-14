@@ -1,5 +1,5 @@
 ---
-title: "FreeIPA High-Availability"
+title: "FreeIPA High-Availability with Keepalived"
 date: 2020-09-15T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Setup High-Availability for FreeIPA using Keepalived"
+description: "In this post we'll be replacing a single FreeIPA host with two replicas and setting up High-Availablity with Keepalived."
 canonicalURL: "https://blog.stabl.one/posts/freeipa-ha/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
@@ -31,15 +31,13 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-## FreeIPA High-Availbility with Keepalived
+## Goal and Prerequisites
 
 FreeIPA is a popular application which can be used for centralized user and host management, DNS and even certificates. While multiple replicas of the FreeIPA server can provide failover, it is not truly highly-available unless the client switches over to the replica server. Therefore we will configure the web interface and the LDAP server to automatically failover and be available under the same address/hostname at all times.
 
-## Goal and Prerequisites
-
 In this guide we will replace a FreeIPA server reachable at ipa.domain with the IP address 192.168.0.100 with two replicas ipa0.domain and ipa1.domain which share a so-called Virtual IP (VIP) address. The goal is that the configuration of all clients, whether they interact with the server via LDAP or HTTP, does not have to be changed. If Linux hosts have be joined to the domain and the hostname of the server has been set manually and not auto-detected these have to be reconfigured or rejoined.
 
-## Ensure the Replication Agreements are Setup Correctly
+### Ensure the Replication Agreements are Setup Correctly
 
 After you have setup the two new replicas ipa0.domain and ipa1.domain, make sure they can replicate between each other even without the server which should be removed. In the web interface head to IPA Server > Topology > Topology Graph and check if a direct replication agreement exists between the two new servers for CA and domain, if not create it.
 
