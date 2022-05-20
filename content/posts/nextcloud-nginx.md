@@ -1,6 +1,6 @@
 ---
 title: "Setting up Nextcloud with Nginx, PHP-FPM and Docker-Compose"
-date: 2022-05-14T11:30:03+00:00
+date: 2022-05-20T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["Nextcloud", "Docker"]
@@ -41,7 +41,7 @@ While PHP-FPM will be used to run Nextcloud's PHP code.
 The user data will be stored on an NFS mount.
 This will be installed on a Ubuntu 20.04 VM which already has Docker and Docker Compose installed.
 
-### Setting up the New Installation
+### Backing up the Old Installation
 
 To take a backup of an existing Nextcloud installation three things are needed.
 First, the data folder where the bulk of the user data is stored, second, the database and last but not least the webroot, which contains the code and configuration of the Nextcloud instance.
