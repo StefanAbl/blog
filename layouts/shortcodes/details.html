@@ -1,0 +1,7 @@
+{{ $summary:= .Get 0 }} 
+
+
+<details class="toc">
+    <summary><b>{{$summary}}</b></summary>
+      {{ .Inner }}
+</details>
