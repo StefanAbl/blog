@@ -1,7 +1,7 @@
 FROM klakegg/hugo:alpine AS builder
 WORKDIR /workdir
 COPY . /workdir
-RUN apk add --update --no-cache git openssh-client
+RUN apk add --update --no-cache git
 RUN git submodule init && \
   git submodule update && \
   hugo --panicOnWarning && \
