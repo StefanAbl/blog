@@ -157,10 +157,10 @@ ipa service-add HTTP/ipa.domain
 ipa service-add ldap/ipa.domain
 ```
 
-Then we need to make the certificates for the new servers ipa0.domain and ipa1.domain also valid for ipa.domain. For this, first, the request ID of the certificates currently used for the web server and LDAP server has to be found. This is done by running `sudo getcert list | less`. Then, search for HTTP by entering `/HTTP` and also search for ldap. Once the request IDs for the certificates are obtained, the certificate requests can be modified. The certificates requested are then also valid for ipa.domain next to ipa0.domain or ipa1.domain. And automatically installed in the same place as the old ones.
+Then we need to make the certificates for the new servers ipa0.domain and ipa1.domain also valid for ipa.domain. For this, first, the request ID of the certificates currently used for the web server and LDAP server has to be found. This is done by running `sudo getcert list | less`. Then, search for HTTP by entering `/HTTP` and also search for ldap. Once the request IDs for the certificates are obtained, the certificate requests can be modified. Reuse the domains listed in the row starting with `dns` and add ipa.domain by passing them to the command with the option `-D` as shown below. The certificates requested are then also valid for ipa.domain next to ipa0.domain or ipa1.domain. And automatically installed in the same place as the old ones.
 
 ```
-sudo getcert resubmit -i "20220131213857" -D ipa0.domain -D ipa.domain -K HTTP/ipa0.domain
+sudo getcert resubmit -i "20220131213857" -D ipa0.domain -D ipa.domain -D ipa-ca.domain
 ```
 
 Sources: [here](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/6FISBEB4UCE5IGW2XMVVYRR6Q2WOZG46/) and [here](https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/BVJEMTQTFBU2XGVZCQDSVXS5ZJNXIZCK/)
