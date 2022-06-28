@@ -92,7 +92,7 @@ resource "tls_private_key" "temporary" {
 }
 
 resource "freeipa_host" "hostname" {
-  fqdn        = var.hostname
+  fqdn        = "${var.hostname}.${var.domain}"
   description = "This is a test host"
   force       = true
   random      = true
@@ -201,7 +201,7 @@ It can be accessed as `${freeipa_host.hostname.randompassword}`.
 
 ```hcl
 resource "freeipa_host" "hostname" {
-  fqdn        = var.hostname
+  fqdn        = "${var.hostname}.${var.domain}"
   description = "This is a test host"
   force       = true
   random      = true
