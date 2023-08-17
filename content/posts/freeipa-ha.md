@@ -10,7 +10,7 @@ showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
-comments: false
+comments: true
 description: "In this post we'll be replacing a single FreeIPA host with two replicas and setting up High-Availablity with Keepalived."
 canonicalURL: "https://blog.stabl.one/posts/freeipa-ha/"
 disableHLJS: false # to disable highlightjs

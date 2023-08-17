@@ -10,7 +10,7 @@ showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
-comments: false
+comments: true
 description: "In this post I present my experience of using Ansible to manage my first Kubernetes cluster."
 canonicalURL: "https://blog.stabl.one/posts/ansible-kubernetes/"
 disableHLJS: false # to disable highlightjs
