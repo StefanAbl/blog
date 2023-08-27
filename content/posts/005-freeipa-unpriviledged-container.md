@@ -5,7 +5,7 @@ date: 2022-11-20T11:30:03+00:00
 tags: ["FreeIPA", "Proxmox"]
 comments: true
 description: "Adopt an unprivileged LXC container into a FreeIPA domain for easy management."
-canonicalURL: "https://blog.stabl.one/posts/freeipa-unpriviledged-container/"
+canonicalURL: "https://blog.stabl.one/posts/005-freeipa-unpriviledged-container/"
 editPost:
     URL: "https://github.com/stefanabl/blog/tree/main/content"
     Text: "Suggest Changes" # edit text

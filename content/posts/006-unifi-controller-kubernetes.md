@@ -1,11 +1,11 @@
 ---
 title: "Deploying the UniFi SDN Controller on Kubernetes"
-date: 2023-08-27T09:30:03+00:00
+date: 2023-08-27T07:30:03+00:00
 # weight: 1
 tags: ["Kubernetes", "UniFi"]
 comments: true 
 description: "Run the UniFi SDN controller on Kubernetes using Ingress Nginx"
-canonicalURL: "https://blog.stabl.one/posts/unifi-controller-kubernetes/"
+canonicalURL: "https://blog.stabl.one/posts/006-unifi-controller-kubernetes/"
 editPost:
     URL: "https://github.com/stefanabl/blog/tree/main/content"
     Text: "Suggest Changes" # edit text

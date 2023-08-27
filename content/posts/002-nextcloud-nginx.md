@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: true
 description: "This post describes the migration of an existing Nextcloud installation to a stack running Nginx and PHP-FPM on Docker Compose."
-canonicalURL: "https://blog.stabl.one/posts/nextcloud-nginx/"
+canonicalURL: "https://blog.stabl.one/posts/002-nextcloud-nginx/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false

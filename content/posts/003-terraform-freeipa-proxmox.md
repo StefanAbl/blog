@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: true
 description: "This post explores how to automatically create a VM on Proxmox with Terraform and enroll it in a FreeIPA domain."
-canonicalURL: "https://blog.stabl.one/posts/terraform-freeipa-proxmox/"
+canonicalURL: "https://blog.stabl.one/posts/003-terraform-freeipa-proxmox/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false

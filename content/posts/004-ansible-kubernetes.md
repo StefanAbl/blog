@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: true
 description: "In this post I present my experience of using Ansible to manage my first Kubernetes cluster."
-canonicalURL: "https://blog.stabl.one/posts/ansible-kubernetes/"
+canonicalURL: "https://blog.stabl.one/posts/004-ansible-kubernetes/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false

@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: true
 description: "In this post we'll be replacing a single FreeIPA host with two replicas and setting up High-Availablity with Keepalived."
-canonicalURL: "https://blog.stabl.one/posts/freeipa-ha/"
+canonicalURL: "https://blog.stabl.one/posts/001-freeipa-ha/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
