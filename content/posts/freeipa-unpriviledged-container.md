@@ -7,7 +7,7 @@ comments: true
 description: "Adopt an unprivileged LXC container into a FreeIPA domain for easy management."
 canonicalURL: "https://blog.stabl.one/posts/freeipa-unpriviledged-container/"
 editPost:
-    URL: "https://github.com/stefanabl/blog"
+    URL: "https://github.com/stefanabl/blog/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
