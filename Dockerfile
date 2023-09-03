@@ -1,7 +1,7 @@
 FROM klakegg/hugo:alpine AS builder
+RUN apk add --update --no-cache git
 WORKDIR /workdir
 COPY . /workdir
-RUN apk add --update --no-cache git
 RUN git submodule init && \
   git submodule update && \
   hugo --panicOnWarning && \
@@ -10,4 +10,5 @@ RUN git submodule init && \
 
 FROM nginx
 COPY --from=builder /workdir/public /usr/share/nginx/html
-RUN sed -i 's/listen *80;/listen 8080;/g' /etc/nginx/conf.d/default.conf && ls -lah /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN nginx -t && ls -lah /usr/share/nginx/html
