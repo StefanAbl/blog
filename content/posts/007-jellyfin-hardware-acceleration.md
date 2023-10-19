@@ -55,6 +55,8 @@ You can see the configuration I use in the screenshot below.
 
 Inside the virtual machine we first check if the graphics card was successfully passed through and recognized, by checking for the presence of a device starting with `render` in the folder `/dev/dri`.
 If this is present, the pass through was successful.
+If it does not show up but is listed in the output of `lspci` the you might be missing the necessary drivers.
+I was able to fix this by installing the package `linux-generic` using apt.
 
 ```sh
 $ ls -lh /dev/dri
